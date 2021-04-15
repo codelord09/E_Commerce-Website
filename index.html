@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Codevo - Ecommerce Website</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home" class="header">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="navigation container">
+                <div class="logo">
+                    <h1>Codevo</h1>
+                </div>
+
+                <div class="menu">
+                    <div class="top-nav">
+                        <div class="logo">
+                            <h1>Codevo</h1>
+                        </div>
+                        <div class="close">
+                            <i class="bx bx-x"></i>
+                        </div>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link scroll-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="product.html" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link scroll-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link scroll-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#account" class="nav-link scroll-link">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+                        </li>
+                        <li class="loginForm">
+                            <!-- Login Form -->
+                            <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+                            <!-- The Modal -->
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                                <!-- Modal Content -->
+                                <form class="modal-content animate" action="/action_page.php">
+
+
+                                    <div class="container">
+                                        <label for="uname"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                        <button type="submit">Login</button>
+                                        <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+                                    </div>
+
+                                    <div class="container" style="background-color:#f1f1f1">
+                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                    </div>
+                                </form>
+                            </div>
+                            <style>
+                                .modal {
+                                    display: none;
+                                    /* Hidden by default */
+                                    position: fixed;
+                                    /* Stay in place */
+                                    z-index: 1;
+                                    /* Sit on top */
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    /* Full width */
+                                    height: 100%;
+                                    /* Full height */
+                                    overflow: auto;
+                                    /* Enable scroll if needed */
+                                    background-color: rgb(0, 0, 0);
+                                    /* Fallback color */
+                                    background-color: rgba(0, 0, 0, 0.4);
+                                    /* Black w/ opacity */
+                                    padding-top: 60px;
+                                }
+                                /* Modal Content/Box */
+                                
+                                .modal-content {
+                                    background-color: #fefefe;
+                                    margin: 5px auto;
+                                    /* 15% from the top and centered */
+                                    border: 1px solid #888;
+                                    width: 80%;
+                                    /* Could be more or less, depending on screen size */
+                                }
+                                /* The Close Button */
+                                
+                                .close {
+                                    /* Position it in the top right corner outside of the modal */
+                                    position: absolute;
+                                    right: 25px;
+                                    top: 0;
+                                    color: #000;
+                                    font-size: 35px;
+                                    font-weight: bold;
+                                }
+                                /* Close button on hover */
+                                
+                                .close:hover,
+                                .close:focus {
+                                    color: red;
+                                    cursor: pointer;
+                                }
+                                /* Add Zoom Animation */
+                                
+                                .animate {
+                                    -webkit-animation: animatezoom 0.6s;
+                                    animation: animatezoom 0.6s
+                                }
+                                
+                                @-webkit-keyframes animatezoom {
+                                    from {
+                                        -webkit-transform: scale(0)
+                                    }
+                                    to {
+                                        -webkit-transform: scale(1)
+                                    }
+                                }
+                                
+                                @keyframes animatezoom {
+                                    from {
+                                        transform: scale(0)
+                                    }
+                                    to {
+                                        transform: scale(1)
+                                    }
+                                }
+                            </style>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="cart.html" class="cart-icon">
+                    <i class="bx bx-shopping-bag"></i>
+                </a>
+
+                <div class="hamburger">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <img src="./images/banner.png" alt="" class="hero-img" />
+
+        <div class="hero-content">
+            <h2><span class="discount">70% </span> SALE OFF</h2>
+            <h1>
+                <span>Summer Vibes</span>
+                <span>mode on</span>
+            </h1>
+            <a class="btn" href="#">shop now</a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="advert section">
+            <div class="advert-center container">
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2>
+                                Girls <br /> Clothing
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert1.png" alt="">
+                </div>
+
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2>
+                                Summer <br /> Clothing
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert2.png" alt="">
+                </div>
+
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2>
+                                Boys <br /> Clothing
+                            </h2>
+                            <h4>Worlds Best Brands</h4>
+                        </div>
+                    </div>
+                    <img src="./images/advert3.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="section featured">
+            <div class="title">
+                <h1>Featured Products</h1>
+            </div>
+
+            <div class="product-center container">
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic2.jpg" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic1.jpg" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic3.jpg" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic4.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <form action="action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+            <style>
+                * {
+                    box-sizing: border-box
+                }
+                /* Full-width input fields */
+                
+                input[type=text],
+                input[type=password] {
+                    width: 100%;
+                    padding: 15px;
+                    margin: 5px 0 22px 0;
+                    display: inline-block;
+                    border: none;
+                    background: #f1f1f1;
+                }
+                
+                input[type=text]:focus,
+                input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+                
+                hr {
+                    border: 1px solid #f1f1f1;
+                    margin-bottom: 25px;
+                }
+                /* Set a style for all buttons */
+                
+                button {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    opacity: 0.9;
+                }
+                
+                button:hover {
+                    opacity: 1;
+                }
+                /* Extra styles for the cancel button */
+                
+                .cancelbtn {
+                    padding: 14px 20px;
+                    background-color: #f44336;
+                }
+                /* Float cancel and signup buttons and add an equal width */
+                
+                .cancelbtn,
+                .signupbtn {
+                    float: left;
+                    width: 50%;
+                }
+                /* Add padding to container elements */
+                
+                .container {
+                    padding: 16px;
+                }
+                /* Clear floats */
+                
+                .clearfix::after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+            </style>
+
+
+
+        </section>
+
+        <!--Latest -->
+        <section class="section featured">
+            <div class="title">
+                <h1>Latest Products</h1>
+            </div>
+
+            <div class="product-center container">
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic5.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic2.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic1.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic4.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic1.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic3.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic2.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="./images/pic5.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="#">
+                            <h3>Boy’s T-Shirt</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">$50</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Banner -->
+        <section class="section">
+            <div class="product-banner">
+                <div class="left">
+                    <img src="./images/test.jpg" alt="" />
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <h2><span class="discount">70% </span> SALE OFF</h2>
+                        <h1>
+                            <span>Collect Your</span>
+                            <span>Kids Collection</span>
+                        </h1>
+                        <a class="btn" href="#">shop now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="testimonial-center container">
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="./images/profile1.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="./images/profile2.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="./images/profile3.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="section">
+            <div class="brands-center container">
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <h3>EXTRAS</h3>
+                    <a href="#">Brands</a>
+                    <a href="#">Gift Certificates</a>
+                    <a href="#">Affiliate</a>
+                    <a href="#">Specials</a>
+                    <a href="#">Site Map</a>
+                </div>
+                <div class="footer-center">
+                    <h3>INFORMATION</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Site Map</a>
+                </div>
+                <div class="footer-center">
+                    <h3>MY ACCOUNT</h3>
+                    <a href="#">My Account</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Wish List</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Returns</a>
+                </div>
+                <div class="footer-center">
+                    <h3>CONTACT US</h3>
+                    <div>
+                        <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span> 42 Dream House, Dreammy street, 7131 Dreamville, USA
+                    </div>
+                    <div>
+                        <span>
+              <i class="far fa-envelope"></i>
+            </span> company@gmail.com
+                    </div>
+                    <div>
+                        <span>
+              <i class="fas fa-phone"></i>
+            </span> 456-456-4512
+                    </div>
+                    <div>
+                        <span>
+              <i class="far fa-paper-plane"></i>
+            </span> Dream City, USA
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

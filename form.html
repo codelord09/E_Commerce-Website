@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Payment Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" onsubmit="return validate()" name="dete" method="post">
+            <h1 class="head">Payment form</h1>
+            <hr />
+            <h2>Contact Details</h2>
+            <p>
+                Name:
+                <input type="text" name="Name" id="fname" placeholder="Your Name Here" required />
+                <span id="errorname" style="color: red; font-size: 15px"> </span>
+            </p>
+            <fieldset>
+                <legend>Gender</legend>
+                <p>
+                    Male
+                    <input type="radio" name="Gender" id="Male" value="Male" required /> Female
+                    <input type="radio" name="Gender" id="Female" value="Female" required />
+                </p>
+            </fieldset>
+            <p>
+                Address
+                <textarea name="Address" id="address" cols="100" rows="4" placeholder="Your Address Here" required></textarea>
+            </p>
+            <p>
+                Email
+                <input type="email" name="Email" id="email1" placeholder="example@www.com" />
+                <span id="erroremail1" style="color: red; font-size: 15px"> </span>
+            </p>
+            <p>
+                Contact Number
+                <input type="number" name="Mobile Number" id="mobile" placeholder="7772042727" required />
+            </p>
+            <span id="errormobi" style="color: red; font-size: 15px"> </span>
+            <p>
+                Pincode
+                <input type="number" name="Pincode" id="pincode" placeholder="474009" required />
+            </p>
+            <span id="errorpin" style="color: red; font-size: 15px"> </span>
+            <hr />
+            <h2>Payment Details</h2>
+            <p>
+                Card Type
+                <select name="CardType" id="cardType" required>
+            <option value="">--Select A card Type--</option>
+            <option value="rupay">Rupay</option>
+            <option value="Master Card">Master Card</option>
+            <option value="visa">Visa</option>
+          </select>
+            </p>
+            <p>
+                Card Number:
+                <input type="number" name="CardNumber " id="cnumber" placeholder="1111-2222-3333-4444" required />
+            </p>
+            <span id="errorcnumber" style="color: red; font-size: 15px"> </span>
+            <p>
+                Password:
+                <input type="password" name="password" id="password" placeholder="3w#e@lw&q92" required />
+            </p>
+            <p>
+                Expiration Date
+                <input type="date" name="date" id="date" placeholder="1234" required />
+            </p>
+            <p>
+                CVV
+                <input type="password" name="cvv" id="cvv" placeholder="123" required />
+            </p>
+            <span id="errorcvv" style="color: red; font-size: 15px"> </span>
+            <div class="btn">
+                <p><input type="submit" value="Pay Now" /></p>
+                <p><input type="reset" value="Reset" /></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxaHFORc860mHjyRhg9vT-lUBKfF5NjC44bmvi4KS7Y-GsTkqcFrVzGtBSKgXxGzHPtdw/exec'
+        const form = document.forms["dete"]
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for Purchasing with us..! Your Item will be delivered at earliest..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

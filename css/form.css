@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    margin: auto;
+    font-family: "Ubuntu", sans-serif;
+    font-size: large;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lo {
+    width: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    float: right;
+}
+
+.container {
+    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgb(239, 243, 20);
+    border-radius: 5px;
+}
+
+.head {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+input[type="submit"] {
+    background-color: tomato;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: red;
+}
+
+input[type="reset"] {
+    background-color: tomato;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="reset"]:hover {
+    background-color: red;
+}
+
+fieldset {
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.badri {
+    margin-left: 500px;
+}
